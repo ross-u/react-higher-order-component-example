@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Higher from '../hoc/Higher'
+
 
 class ArticlePreview extends Component {
   state = {
@@ -25,4 +25,4 @@ class ArticlePreview extends Component {
   }
 }
 
-export default Higher(ArticlePreview);
+export default ArticlePreview;
