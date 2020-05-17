@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Higher from './../hoc/Higher'
+import Higher from '../hoc/Higher'
 
 class ArticlePreview extends Component {
   state = {
@@ -12,13 +12,6 @@ class ArticlePreview extends Component {
     this.setState({ title, description });
   }
 
-  getData = () => {
-    const pr = this.props.getData();
-    pr
-      .then((response) => this.setState({ content: response.data.value }))
-      .catch((err) => console.log(err));
-
-  }
 
   render() {
     return (
@@ -26,13 +19,7 @@ class ArticlePreview extends Component {
         <h3>{this.state.title ? this.state.title : null}</h3>
         <p>{this.state.description ? this.state.description : null}</p>
 
-        {
-          this.state.content
-            ? <p>{this.state.content}</p>
-            : <div className="fade">
-              <button onClick={this.getData} className="btn-more">More</button>
-            </div>
-        }
+        <div className="fade"></div>
       </div>
     )
   }
