@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Article from './components/Article';
+import ArticlePreview from './components/ArticlePreview';
 import Navbar from './components/Navbar';
 
 
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {articles.map((article) => <Article {...article} />)}
+      {articles.map((article) => <ArticlePreview {...article} />)}
     </div>
   );
 }
