@@ -5,7 +5,7 @@ class ArticlePreview extends Component {
   state = {
     title: undefined,
     description: undefined,
-    
+    content: undefined
   }
 
   componentDidMount() {
